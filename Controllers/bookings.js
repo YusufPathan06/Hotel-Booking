@@ -9,13 +9,6 @@ router.post('/', async (req, res) => {
   }
 
   try {
-    let bookingexist = await Booking.find({ roomname, username });
-    console.log(bookingexist);
-
-    if (bookingexist) {
-      return res.status(200).send('booking exists');
-    }
-
     var data = { roomname, price, username, useremail, userid };
     Booking.create(data, function (err, response) {
       if (err) {

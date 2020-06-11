@@ -29,7 +29,9 @@ class Login extends React.Component {
   HandleSubmit = async (e) => {
     e.preventDefault();
     let message;
-    if (this.state.email == 'admin@admin.com' && this.state.password == 'admin')
+    if (this.state.email == 'admin@admin.com' && this.state.password == 'admin'){
+      return (window.location.replace('/admin'))
+    }
       axios
         .get(
           '/user/user?email=' +
