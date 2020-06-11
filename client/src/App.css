@@ -14,6 +14,13 @@
   background-color: bisque;
 }
 
+.login {
+  width: 40rem;
+  padding: 3rem;
+  margin: 3rem auto;
+  background-color: bisque;
+}
+
 .user {
   width: 70%;
   padding: 3rem;
