@@ -7,18 +7,20 @@
   pointer-events: none;
 }
 
-.admin{
+.admin {
   width: 40rem;
-  padding:3rem;
-  margin:3rem auto;
-  background-color:bisque;
+  padding: 3rem;
+  margin: 3rem auto;
+  background-color: bisque;
 }
 
 .user {
   width: 70%;
-  padding:3rem;
-  margin:3rem auto;
-  background-color:bisque;
+  padding: 3rem;
+  margin: 3rem auto;
+  background-color: bisque;
+  display: flex;
+  flex-direction: row;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -29,29 +29,30 @@ class Login extends React.Component {
   HandleSubmit = async (e) => {
     e.preventDefault();
     let message;
-    axios
-      .get(
-        '/user/user?email=' +
-          this.state.email +
-          '&' +
-          'password=' +
-          this.state.password
-      )
-      .then((res) => {
-        this.setState({
-          message: res.data,
-        });
-        console.log(res.data);
+    if (this.state.email == 'admin@admin.com' && this.state.password == 'admin')
+      axios
+        .get(
+          '/user/user?email=' +
+            this.state.email +
+            '&' +
+            'password=' +
+            this.state.password
+        )
+        .then((res) => {
+          this.setState({
+            message: res.data,
+          });
+          console.log(res.data);
 
-        window.localStorage.setItem('name', res.data.user.name);
-        window.localStorage.setItem('id', res.data.user._id);
-        window.localStorage.setItem('email', res.data.user.email);
-      })
-      .catch((err) => {
-        this.setState({
-          message: 'incorrect',
+          window.localStorage.setItem('name', res.data.user.name);
+          window.localStorage.setItem('id', res.data.user._id);
+          window.localStorage.setItem('email', res.data.user.email);
+        })
+        .catch((err) => {
+          this.setState({
+            message: 'incorrect',
+          });
         });
-      });
   };
 
   render = () => {

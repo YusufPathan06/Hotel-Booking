@@ -29,6 +29,7 @@ class Hotel extends Component {
       price,
     });
     console.log(booking.data);
+    alert("Booked")
   };
 
   render() {
@@ -45,7 +46,7 @@ class Hotel extends Component {
           {this.state.rooms &&
             this.state.rooms.map((room) => {
               return (
-                <Card style={{ width: '18rem', display:'box'}}>
+                <Card className = 'mr-auto' style={{ width: '18rem'}}>
                   <Card.Body >
                     <Card.Title>Room: {room.roomname}</Card.Title>
                     <Card.Text>Price: {room.price}</Card.Text>
